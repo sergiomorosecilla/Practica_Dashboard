@@ -6,32 +6,6 @@ Este proyecto forma parte del módulo Dashboard & Análisis de Datos y, a partir
 
 En mi caso me he decantado por bases de datos sobre temporadas de partidos de torneos de la ATP, con el objetivo de mostrar la magnitud de la leyenda del Big Three (Rafael Nadal, Roger Federer y Novak Djokovic), centrado en los años en los que han coincidido al menos dos de ellos (temporadas 2003 a 2024).
 
-🎯 Objetivos del proyecto
-
-Transformación y limpieza de los datos
-
-Detección y eliminación de valores nulos y duplicados.
-
-Normalización de formatos (fechas, categorías, métricas numéricas).
-
-Creación de nuevas variables derivadas para enriquecer el análisis.
-
-Dashboard en Excel
-
-Visualización de los indicadores clave (KPIs).
-
-Tablas dinámicas para análisis interactivo.
-
-Segmentadores para filtrar por variables relevantes.
-
-Gráficos dinámicos que permiten explorar los resultados.
-
-Informe explicativo
-
-Resumen del proceso de análisis.
-
-Principales hallazgos obtenidos del EDA.
-
 📂 Estructura del repositorio
 
 El repositorio contiene los siguientes archivos y carpetas:
@@ -50,10 +24,10 @@ Dataset elegido: https://github.com/JeffSackmann
 
 Fuente: https://github.com/JeffSackmann/tennis_atp.git
 
-Dimensiones iniciales: 327.324 registros y 49 columnas.
-Tras la limpieza (eliminación de torneos por equipos como Copa Davis y creación de nuevas columnas para separar el Big Three) quedaron 58.998 registros y 57 columnas.
+Dimensiones iniciales: 327.324 registros y 49 columnas. Tras la limpieza (eliminación de torneos por equipos como Copa Davis y creación de nuevas columnas para separar el Big Three) quedaron 58.998 registros y 57 columnas.
 
-Transformación y limpieza
+**Transformación y limpieza**
+
 Procesos realizados:
 
 Modificación de la columna tourney_date a formato fecha.
@@ -70,7 +44,7 @@ Creación de una columna binaria para identificar al Big Three (1 si es Federer,
 
 Creación de la columna año para segmentar por temporadas.
 
-Dashboard
+**Dashboard**
 
 <img width="1242" height="680" alt="image" src="https://github.com/user-attachments/assets/92cf77a3-468d-4bf0-ba26-9268539098c8" />
 
@@ -87,7 +61,7 @@ Gráficos de columnas agrupadas por año para mostrar el dominio temporada a tem
 
 Segmentadores añadidos: año (temporada), superficie y nivel de torneo.
 
-Informe explicativo
+**Informe explicativo**
 Conclusiones principales:
 
 Dominio absoluto: El Big Three no solo gana más del 80% de sus partidos individuales, sino que también concentra un 20% de todos los títulos del circuito en dos décadas.
