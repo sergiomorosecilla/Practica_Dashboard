@@ -5,30 +5,9 @@ FUENTE: https://github.com/JeffSackmann/tennis_atp.git
 
 This contains my master ATP player file, historical rankings, results, and match stats.
 
-There are some tour-level matches with missing stats. Some are missing because ATP doesn't have them. Others I've deleted because they didn't pass some sanity check (loser won 60% of points, or match time was under 20 minutes, etc). Also, Davis Cup matches are included in the tour-level files, but there are no stats for Davis Cup matches until the last few seasons.
-
-
-# Attention
-
-Please read, understand, and abide by the license below. It seems like a reasonable thing to ask, given the hundreds of hours I've put into amassing and maintaining this dataset. Unfortunately, a few bad apples have violated the license, and when people do that, it makes me considerably less motivated to continue updating.
-
-Also, if you're using this for academic/research purposes (great!), take a minute and cite it properly. It's not that hard, it helps others find a useful resource, and let's face it, you should be doing it anyway.
-
 # License
 
 <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">Tennis databases, files, and algorithms</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.tennisabstract.com/" property="cc:attributionName" rel="cc:attributionURL">Jeff Sackmann / Tennis Abstract</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/JeffSackmann" rel="dct:source">https://github.com/JeffSackmann</a>.
-
-In other words: Attribution is required. Non-commercial use only. 
-
-
-
-
-
-
-
-
-
-* Many of the columns in the 'matches' files are self-explanatory, or are very similar to previous columns.
 
 tourney_id
 - a unique identifier for each tournament, such as 2020-888. The exact formats are borrowed from several different sources, so while the first four characters are always the year, the rest of the ID doesn't follow a predictable structure.
