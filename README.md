@@ -1,101 +1,102 @@
 
+📊 Proyecto: Dashboard & Análisis de Datos
+📌 Descripción
+
+Este proyecto forma parte del módulo Dashboard & Análisis de Datos y, a partir de un conjunto de datos de libre elección, he realizado un análisis exploratorio de datos (EDA) y construido un dashboard en Excel, redactando un informe explicativo con las principales conclusiones.
+
+En mi caso me he decantado por bases de datos sobre temporadas de partidos de torneos de la ATP, con el objetivo de mostrar la magnitud de la leyenda del Big Three (Rafael Nadal, Roger Federer y Novak Djokovic), centrado en los años en los que han coincidido al menos dos de ellos (temporadas 2003 a 2024).
+
+🎯 Objetivos del proyecto
+
+Transformación y limpieza de los datos
+
+Detección y eliminación de valores nulos y duplicados.
+
+Normalización de formatos (fechas, categorías, métricas numéricas).
+
+Creación de nuevas variables derivadas para enriquecer el análisis.
+
+Dashboard en Excel
+
+Visualización de los indicadores clave (KPIs).
+
+Tablas dinámicas para análisis interactivo.
+
+Segmentadores para filtrar por variables relevantes.
+
+Gráficos dinámicos que permiten explorar los resultados.
+
+Informe explicativo
+
+Resumen del proceso de análisis.
+
+Principales hallazgos obtenidos del EDA.
+
+📂 Estructura del repositorio
+
+El repositorio contiene los siguientes archivos y carpetas:
+
+Carpeta temporada con datos de las temporadas 1998 a 2024 sobre los partidos de los diferentes torneos de todos los niveles de la ATP.
+
+Archivo Jupyter Notebook con el merge de todos los datos.
+
+Archivo estadísticas_atp_1998_2024.csv creado desde el Jupyter Notebook, destinado al desarrollo del EDA y Dashboard en Excel.
+
+🔎 Metodología seguida
+
+Selección del dataset
+
+Dataset elegido: https://github.com/JeffSackmann
+
+Fuente: https://github.com/JeffSackmann/tennis_atp.git
+
+Dimensiones iniciales: 327.324 registros y 49 columnas.
+Tras la limpieza (eliminación de torneos por equipos como Copa Davis y creación de nuevas columnas para separar el Big Three) quedaron 58.998 registros y 57 columnas.
+
+Transformación y limpieza
+Procesos realizados:
+
+Modificación de la columna tourney_date a formato fecha.
+
+No existe columna de identificador único.
+
+Revisión manual de las columnas.
+
+El valor 36 en winner_seed y loser_seed se usa como referencia para agrupar NO cabezas de serie.
+
+El valor DD en winner_entry y loser_entry se usa como referencia para agrupar los que entran directamente a cuadro (Direct Draw).
+
+Creación de una columna binaria para identificar al Big Three (1 si es Federer, Nadal o Djokovic; 0 si es el resto).
+
+Creación de la columna año para segmentar por temporadas.
+
+Dashboard
+
+<img width="1242" height="680" alt="image" src="https://github.com/user-attachments/assets/92cf77a3-468d-4bf0-ba26-9268539098c8" />
 
 
-FUENTE: https://github.com/JeffSackmann/tennis_atp.git
+KPIs representados: total de partidos ganados y porcentaje, total de torneos ganados y porcentaje, así como clasificaciones Top 10 en títulos, aces y break points salvados.
 
-This contains my master ATP player file, historical rankings, results, and match stats.
+Tipos de visualización utilizados:
 
-<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">Tennis databases, files, and algorithms</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.tennisabstract.com/" property="cc:attributionName" rel="cc:attributionURL">Jeff Sackmann / Tennis Abstract</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/JeffSackmann" rel="dct:source">https://github.com/JeffSackmann</a>.
+Tablas dinámicas para los KPIs.
 
-tourney_id
-- a unique identifier for each tournament, such as 2020-888. The exact formats are borrowed from several different sources, so while the first four characters are always the year, the rest of the ID doesn't follow a predictable structure.
+Gráficos circulares 3D para la proporción Big Three vs resto.
 
-tourney_name
-surface
-draw_size
-- number of players in the draw, often rounded up to the nearest power of 2. (For instance, a tournament with 28 players may be shown as 32.)
+Gráficos de columnas agrupadas por año para mostrar el dominio temporada a temporada.
 
-tourney_level
-- For men: 'G' = Grand Slams, 'M' = Masters 1000s, 'A' = other tour-level events, 'C' = Challengers, 'S' = Satellites/ITFs, 'F' = Tour finals and other season-ending events, and 'D' = Davis Cup 
-- For women, there are several additional tourney_level codes, including 'P' = Premier, 'PM' = Premier Mandatory, and 'I' = International. The various levels of ITFs are given by the prize money (in thousands), such as '15' = ITF $15,000. Other codes, such as 'T1' for Tier I (and so on) are used for older WTA tournament designations. 'D' is used for Federation/Fed/Billie Jean King Cup, and also for Wightman Cup and Bonne Bell Cup.
+Segmentadores añadidos: año (temporada), superficie y nivel de torneo.
 
-- Others, eventually for both genders: 'E' = exhibition (events not sanctioned by the tour, though the definitions can be ambiguous), 'J' = juniors, and 'T' = team tennis, which does yet appear anywhere in the dataset but will at some point.
+Informe explicativo
+Conclusiones principales:
 
-tourney_date
-- eight digits, YYYYMMDD, usually the Monday of the tournament week.
+Dominio absoluto: El Big Three no solo gana más del 80% de sus partidos individuales, sino que también concentra un 20% de todos los títulos del circuito en dos décadas.
 
-match_num
-- a match-specific identifier. Often starting from 1, sometimes counting down from 300, and sometimes arbitrary. 
+Consistencia temporal: Mantienen un nivel top durante más de 15 años consecutivos, algo inédito en la historia del tenis.
 
-winner_id
-- the player_id used in this repo for the winner of the match
+Versatilidad y fortaleza: No solo ganan títulos, también lideran en métricas de servicio (aces) y en defensa (break points salvados), demostrando un dominio integral del juego.
+Nota: los datos de Federer no son completos, ya que su carrera se inició en 1998, pero se ha acotado el análisis a la etapa en que coincidieron al menos dos miembros del Big Three para mantener la relevancia de los datos.
 
-winner_seed
-winner_entry
-- 'WC' = wild card, 'Q' = qualifier, 'LL' = lucky loser, 'PR' = protected ranking, 'ITF' = ITF entry, and there are a few others that are occasionally used.
-
-winner_name
-winner_hand
-- R = right, L = left, U = unknown. For ambidextrous players, this is their serving hand.
-winner_ht
-- height in centimeters, where available
-
-winner_ioc
-- three-character country code
-
-winner_age
-- age, in years, as of the tourney_date
-
-loser_id
-loser_seed
-loser_entry
-loser_name
-loser_hand
-loser_ht
-loser_ioc
-loser_age
-score
-best_of
-- '3' or '5', indicating the the number of sets for this match
-
-round
-minutes
-- match length, where available
-
-w_ace
-- winner's number of aces
-w_df
-- winner's number of doubles faults
-w_svpt
-- winner's number of serve points
-w_1stIn
-- winner's number of first serves made
-w_1stWon
-- winner's number of first-serve points won
-w_2ndWon
-- winner's number of second-serve points won
-w_SvGms
-- winner's number of serve games
-w_bpSaved
-- winner's number of break points saved
-w_bpFaced
-- winner's number of break points faced
-
-l_ace
-l_df
-l_svpt
-l_1stIn
-l_1stWon
-l_2ndWon
-l_SvGms
-l_bpSaved
-l_bpFaced
-
-winner_rank
-- winner's ATP or WTA rank, as of the tourney_date, or the most recent ranking date before the tourney_date
-winner_rank_points
-- number of ranking points, where available
-loser_rank
-loser_rank_points
+Legado histórico: Comparados en conjunto, se consolidan como el bloque más dominante en la era profesional, con una ventaja clara frente al resto de jugadores ATP.
 
 
