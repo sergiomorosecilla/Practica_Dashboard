@@ -30,47 +30,47 @@ Dimensiones iniciales: 327.324 registros y 49 columnas. Tras la limpieza (elimin
 
 Procesos realizados:
 
-Modificación de la columna tourney_date a formato fecha.
+-Modificación de la columna tourney_date a formato fecha.
 
-No existe columna de identificador único.
+-No existe columna de identificador único.
 
-Revisión manual de las columnas.
+-Revisión manual de las columnas.
 
-El valor 36 en winner_seed y loser_seed se usa como referencia para agrupar NO cabezas de serie.
+-El valor 36 en winner_seed y loser_seed se usa como referencia para agrupar NO cabezas de serie.
 
-El valor DD en winner_entry y loser_entry se usa como referencia para agrupar los que entran directamente a cuadro (Direct Draw).
+-El valor DD en winner_entry y loser_entry se usa como referencia para agrupar los que entran directamente a cuadro (Direct Draw).
 
-Creación de una columna binaria para identificar al Big Three (1 si es Federer, Nadal o Djokovic; 0 si es el resto).
+-Creación de una columna binaria para identificar al Big Three (1 si es Federer, Nadal o Djokovic; 0 si es el resto).
 
-Creación de la columna año para segmentar por temporadas.
+-Creación de la columna año para segmentar por temporadas.
 
 **Dashboard**
 
 <img width="1242" height="680" alt="image" src="https://github.com/user-attachments/assets/92cf77a3-468d-4bf0-ba26-9268539098c8" />
 
 
-KPIs representados: total de partidos ganados y porcentaje, total de torneos ganados y porcentaje, así como clasificaciones Top 10 en títulos, aces y break points salvados.
+-KPIs representados: total de partidos ganados y porcentaje, total de torneos ganados y porcentaje, así como clasificaciones Top 10 en títulos, aces y break points salvados.
 
-Tipos de visualización utilizados:
+-Tipos de visualización utilizados:
 
-Tablas dinámicas para los KPIs.
+-Tablas dinámicas para los KPIs.
 
-Gráficos circulares 3D para la proporción Big Three vs resto.
+-Gráficos circulares 3D para la proporción Big Three vs resto.
 
-Gráficos de columnas agrupadas por año para mostrar el dominio temporada a temporada.
+-Gráficos de columnas agrupadas por año para mostrar el dominio temporada a temporada.
 
-Segmentadores añadidos: año (temporada), superficie y nivel de torneo.
+-Segmentadores añadidos: año (temporada), superficie y nivel de torneo.
 
 **Informe explicativo**
 Conclusiones principales:
 
-Dominio absoluto: El Big Three no solo gana más del 80% de sus partidos individuales, sino que también concentra un 20% de todos los títulos del circuito en dos décadas.
+-Dominio absoluto: El Big Three no solo gana más del 80% de sus partidos individuales, sino que también concentra un 20% de todos los títulos del circuito en dos décadas.
 
-Consistencia temporal: Mantienen un nivel top durante más de 15 años consecutivos, algo inédito en la historia del tenis.
+-Consistencia temporal: Mantienen un nivel top durante más de 15 años consecutivos, algo inédito en la historia del tenis.
 
-Versatilidad y fortaleza: No solo ganan títulos, también lideran en métricas de servicio (aces) y en defensa (break points salvados), demostrando un dominio integral del juego.
+-Versatilidad y fortaleza: No solo ganan títulos, también lideran en métricas de servicio (aces) y en defensa (break points salvados), demostrando un dominio integral del juego.
 Nota: los datos de Federer no son completos, ya que su carrera se inició en 1998, pero se ha acotado el análisis a la etapa en que coincidieron al menos dos miembros del Big Three para mantener la relevancia de los datos.
 
-Legado histórico: Comparados en conjunto, se consolidan como el bloque más dominante en la era profesional, con una ventaja clara frente al resto de jugadores ATP.
+-Legado histórico: Comparados en conjunto, se consolidan como el bloque más dominante en la era profesional, con una ventaja clara frente al resto de jugadores ATP.
 
 
